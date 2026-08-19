@@ -1,0 +1,1162 @@
+* {
+  box-sizing: border-box
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  margin: 0;
+  background: #171614;
+  color: #f6f0e5;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: 300;
+  overflow-x: hidden
+}
+
+body.lock {
+  overflow: hidden
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+button {
+  font: inherit
+}
+
+.section {
+  padding: 140px 7vw;
+  position: relative;
+  overflow: hidden
+}
+
+.inner {
+  max-width: 1180px;
+  margin: auto
+}
+
+.centered {
+  text-align: center
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 65px
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: .42em;
+  color: #d8bf91;
+  line-height: 1.8
+}
+
+.small {
+  font-size: 9px;
+  letter-spacing: .32em;
+  color: #ddd
+}
+
+.copy {
+  max-width: 650px;
+  margin: 28px auto;
+  color: #b9b0a3;
+  font-size: 13px;
+  line-height: 2
+}
+
+.gold,
+.line {
+  width: 70px;
+  height: 1px;
+  background: #d8bf91;
+  margin: 28px auto
+}
+
+.hero {
+  height: 100svh;
+  min-height: 650px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden
+}
+
+.banner-monogram{
+  width: 900px;
+}
+
+.hero-bg,
+.feature-bg {
+  position: absolute;
+  inset: 0;
+  background: url("../images/photos/banner.jpg") center/cover
+}
+
+.hero-bg {
+  animation: zoom 16s ease-in-out infinite alternate
+}
+
+.shade,
+.feature-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .35), rgba(0, 0, 0, .15) 45%, rgba(0, 0, 0, .9))
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2
+}
+
+.hero h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(75px, 14vw, 180px);
+  font-weight: 400;
+  line-height: .72;
+  margin: 40px 0 20px;
+  letter-spacing: -.05em
+}
+
+.hero h1 em {
+  font-size: .28em;
+  color: #d8bf91;
+  font-style: italic;
+  display: block;
+  margin: 22px
+}
+
+.scroll {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8px;
+  letter-spacing: .3em;
+  color: #aaa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  z-index: 3
+}
+
+.scroll i {
+  height: 45px;
+  width: 1px;
+  background: #d8bf91;
+  animation: line 2s infinite
+}
+
+.music {
+  position: fixed;
+  z-index: 20;
+  top: 20px;
+  right: 20px;
+  border: 1px solid #555;
+  border-radius: 30px;
+  padding: 10px 15px;
+  background: #0008;
+  color: #eee;
+  cursor: pointer
+}
+
+.music.active {
+  border-color: #d8bf91;
+  color: #d8bf91
+}
+
+.invitation {
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 30%, #d8bf9112, transparent 35%)
+}
+
+h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(50px, 7vw, 90px);
+  line-height: .95;
+  margin: 12px 0
+}
+
+.signature {
+  font: italic 22px "Cormorant Garamond", serif;
+  color: #aaa;
+  margin-top: 50px
+}
+
+.names {
+  color: #d8bf91;
+  font-size: 10px;
+  letter-spacing: .35em
+}
+
+.couple {
+  background: #211f1b
+}
+
+.couple-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  max-width: 950px;
+  margin: auto
+}
+
+.person {
+  text-align: center
+}
+
+.portrait {
+  height: 580px;
+  background: #2a2722;
+  overflow: hidden;
+  margin-bottom: 28px
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .8s
+}
+
+.person:hover img {
+  transform: scale(1.05)
+}
+
+.person h3 {
+  font: 400 45px "Cormorant Garamond", serif;
+  margin: 8px
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #ffffff18
+}
+
+.detail {
+  min-height: 280px;
+  background: #171614;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 35px
+}
+
+.detail b {
+  font: 20px "Cormorant Garamond", serif;
+  color: #d8bf91;
+  margin-bottom: 25px
+}
+
+.detail small {
+  font-size: 9px;
+  letter-spacing: .35em
+}
+
+.detail p {
+  font-size: 12px;
+  color: #aaa;
+  margin: 15px 0 5px
+}
+
+.detail strong {
+  font: 400 27px "Cormorant Garamond", serif
+}
+
+.countdown-box {
+  text-align: center;
+  margin-top: 90px
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: clamp(20px, 7vw, 90px);
+  margin-top: 30px
+}
+
+.countdown span {
+  display: block;
+  font: 400 clamp(45px, 6vw, 75px) "Cormorant Garamond", serif
+}
+
+.countdown small {
+  font-size: 8px;
+  letter-spacing: .25em;
+  color: #aaa
+}
+
+.feature {
+  min-height: 85vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden
+}
+
+.feature-bg {
+  background-image: url("../images/photos/banner2.jpg");
+  background-attachment: fixed;
+  filter: brightness(.55)
+}
+
+.feature-shade {
+  background: linear-gradient(90deg, #000b, transparent 75%)
+}
+
+.feature-text {
+  position: relative;
+  z-index: 2;
+  padding: 10vw
+}
+
+.feature-text h2 {
+  font-size: clamp(70px, 10vw, 150px)
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  grid-auto-rows: 300px;
+  gap: 14px
+}
+
+.photo {
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #2a2722;
+  cursor: pointer
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .8s;
+  filter: grayscale(20%)
+}
+
+.photo:hover img {
+  transform: scale(1.06);
+  filter: none
+}
+
+.large {
+  grid-row: span 2
+}
+
+.wide {
+  grid-column: 1/-1;
+  height: 450px
+}
+
+.carousel-section {
+  background: #211f1b
+}
+
+.carousel {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 0 55px
+}
+
+.track-wrap {
+  overflow: hidden;
+  width: 100%
+}
+
+.track {
+  display: flex;
+  gap: 18px;
+  transition: .7s
+}
+
+.track>div {
+  flex: 0 0 calc((100% - 36px)/3);
+  height: 450px;
+  overflow: hidden
+}
+
+.track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .7s
+}
+
+.track img:hover {
+  transform: scale(1.05)
+}
+
+.carousel button {
+  flex: 0 0 45px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #d8bf9199;
+  border-radius: 50%;
+  background: #000b;
+  color: #d8bf91;
+  font-size: 28px;
+  cursor: pointer
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 28px
+}
+
+.dots i {
+  width: 6px;
+  height: 6px;
+  background: #ffffff40;
+  border-radius: 50%
+}
+
+.dots i.active {
+  width: 25px;
+  border-radius: 10px;
+  background: #d8bf91
+}
+
+.outline {
+  display: inline-flex;
+  border: 1px solid #d8bf91;
+  color: #d8bf91;
+  padding: 16px 28px;
+  font-size: 9px;
+  letter-spacing: .3em;
+  transition: .3s
+}
+
+.outline:hover {
+  background: #d8bf91;
+  color: #171614
+}
+
+.carousel-section .outline {
+  display: flex;
+  width: max-content;
+  margin: 0 auto
+}
+
+.dress {
+  text-align: center
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap
+}
+
+.tags span {
+  border: 1px solid #d8bf9155;
+  color: #d8bf91;
+  padding: 12px 20px;
+  font-size: 8px;
+  letter-spacing: .25em
+}
+
+.rsvp {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle, #d8bf9112, transparent 45%), #211f1b
+}
+
+.rsvp .outline {
+  margin-top: 15px
+}
+
+.monogram-small{
+  width: 80px;
+}
+
+footer {
+  text-align: center;
+  padding: 60px 20px;
+  background: #0e0d0b;
+  color: #555;
+  font-size: 8px;
+  letter-spacing: .3em
+}
+
+.footer-monogram{
+  width: 210px;
+}
+
+footer div {
+  font: 400 30px "Cormorant Garamond", serif;
+  color: #eee;
+  letter-spacing: .25em;
+  margin-bottom: 12px
+}
+
+.lightbox {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  background: #000f;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 85vh
+}
+
+.lightbox button {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-size: 45px;
+  cursor: pointer
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none
+}
+
+@keyframes zoom {
+  to {
+    transform: scale(1.1)
+  }
+}
+
+@keyframes line {
+
+  0%,
+  100% {
+    transform: scaleY(0)
+  }
+
+  50% {
+    transform: scaleY(1)
+  }
+}
+
+@media(max-width:900px) {
+
+  .couple-grid,
+  .details-grid {
+    grid-template-columns: 1fr
+  }
+
+  .track>div {
+    flex-basis: calc((100% - 18px)/2)
+  }
+
+  .banner-monogram{
+      width: 400px;
+  }
+
+}
+
+@media(max-width:600px) {
+  .section {
+    padding: 100px 6vw
+  }
+
+  .hero h1 {
+    font-size: 23vw
+  }
+
+  .portrait {
+    height: 500px
+  }
+
+  .countdown {
+    gap: 12px
+  }
+
+  .countdown span {
+    font-size: 42px
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 220px
+  }
+
+  .large {
+    grid-column: 1/-1;
+    grid-row: auto
+  }
+
+  .wide {
+    height: 300px
+  }
+
+  .carousel {
+    padding: 0 42px
+  }
+
+  .track>div {
+    flex-basis: 100%;
+    height: 480px
+  }
+
+  .carousel button {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px
+  }
+
+  .feature-bg {
+    background-attachment: scroll
+  }
+}
+
+/* PRENUPTIAL FILM */
+.prenup {
+  background: #211f1b;
+  text-align: center;
+}
+
+.video-wrap {
+  position: relative;
+  width: min(1000px, 100%);
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0e0d0b;
+  border: 1px solid rgba(216, 191, 145, .25);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .28);
+}
+
+.video-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.video-note {
+  margin-top: 18px;
+  color: #8f887d;
+  font-size: 9px;
+  letter-spacing: .12em;
+}
+
+.video-note strong {
+  color: #d8bf91;
+  font-weight: 400;
+}
+
+/* ENTourage */
+.site-nav {
+  position: fixed;
+  z-index: 25;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+  background: linear-gradient(#171614dd, transparent);
+  font-size: 8px;
+  letter-spacing: .28em;
+  color: #d6cec0;
+  backdrop-filter: blur(3px)
+}
+
+.site-nav a {
+  transition: .25s
+}
+
+.site-nav a:hover {
+  color: #d8bf91
+}
+
+.entourage {
+  background: radial-gradient(circle at 50% 15%, rgba(216, 191, 145, .07), transparent 35%), #211f1b
+}
+
+.entourage-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 850px;
+  margin: 0 auto 35px
+}
+
+.role-block {
+  text-align: center;
+  padding: 20px
+}
+
+.role-title {
+  font: italic 18px "Cormorant Garamond", serif;
+  color: #d8bf91;
+  margin: 0 0 8px
+}
+
+.role-block p:not(.role-title),
+.ceremony-role p:not(.role-title):not(.role-subtitle),
+.bearer-grid p:not(.role-title):not(.role-subtitle),
+.verses p:not(.role-title) {
+  margin: 5px 0;
+  color: #c6beb2;
+  font-size: 12px;
+  line-height: 1.65
+}
+
+.centered-role {
+  margin: 5px auto 45px
+}
+
+.sponsors {
+  border-top: 1px solid rgba(216, 191, 145, .18);
+  border-bottom: 1px solid rgba(216, 191, 145, .18);
+  padding: 60px 0
+}
+
+.heading.compact {
+  margin-bottom: 30px
+}
+
+.heading.compact h3 {
+  font: 400 42px "Cormorant Garamond", serif;
+  margin: 8px 0
+}
+
+.sponsor-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  max-width: 950px;
+  margin: auto
+}
+
+.sponsor-columns>div {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: start
+}
+
+.sponsor-columns p {
+  font-size: 11px;
+  color: #c6beb2;
+  line-height: 1.55;
+  margin: 2px 0;
+  text-align: left
+}
+
+.sponsor-columns br {
+  content: "";
+  display: block;
+  margin: 9px 0
+}
+
+.honors-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 900px;
+  margin: 35px auto 0
+}
+
+.honors-grid .role-block:nth-child(3),
+.honors-grid .role-block:nth-child(4) {
+  padding-top: 0
+}
+
+.secondary-party {
+  margin-top: 65px
+}
+
+.party-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px
+}
+
+.ceremony-role {
+  padding: 25px 10px;
+  border-bottom: 1px solid rgba(216, 191, 145, .12);
+  text-align: center
+}
+
+.role-subtitle {
+  font: italic 14px "Cormorant Garamond", serif;
+  color: #bdb3a5;
+  margin: 3px 0 14px
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  color: #c6beb2;
+  font-size: 11px
+}
+
+.pair-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  margin-top: 20px;
+  text-align: left
+}
+
+.pair-list p {
+  font-size: 11px;
+  color: #c6beb2;
+  margin: 5px 0
+}
+
+.bearers {
+  text-align: center;
+  padding: 25px 0
+}
+
+.bearer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px
+}
+
+.verses {
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(216, 191, 145, .12)
+}
+
+@media(max-width:800px) {
+  .site-nav {
+    gap: 14px;
+    font-size: 7px;
+    height: 58px
+  }
+
+  .entourage-top,
+  .sponsor-columns,
+  .honors-grid,
+  .party-columns {
+    grid-template-columns: 1fr;
+    gap: 15px
+  }
+
+  .sponsor-columns p {
+    text-align: center
+  }
+
+  .pair,
+  .pair-list,
+  .bearer-grid {
+    grid-template-columns: 1fr
+  }
+
+  .pair-list {
+    text-align: center;
+    gap: 5px
+  }
+
+  .secondary-party {
+    margin-top: 45px
+  }
+}
+
+@media(max-width:600px) {
+  .site-nav {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0 18px;
+    white-space: nowrap
+  }
+
+  .hero-content {
+    padding-top: 35px
+  }
+}
+
+/* WEDDING DRESS CODE */
+.dress{background:radial-gradient(circle at 50% 20%,rgba(216,191,145,.06),transparent 40%),#171614}
+.dress-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(216,191,145,.16);max-width:1000px;margin:0 auto}
+.dress-card{background:#211f1b;min-height:290px;padding:45px 30px;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;transition:.4s}
+.dress-card:hover{background:#28251f}
+.dress-number{font:400 18px "Cormorant Garamond",serif;color:#d8bf91;margin-bottom:18px}
+.dress-role{font-size:9px;letter-spacing:.35em;color:#d8bf91;margin:0 0 12px}
+.dress-card h3{font:400 38px "Cormorant Garamond",serif;color:#f6f0e5;margin:0 0 7px}
+.dress-detail{font-size:10px;letter-spacing:.16em;color:#b9b0a3;margin:0;text-transform:uppercase}
+@media(max-width:600px){.dress-grid{grid-template-columns:1fr}.dress-card{min-height:240px}}
+
+/* =========================================
+   DRESS CODE COLOR GUIDE
+========================================= */
+
+.dress {
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(216, 191, 145, 0.07),
+            transparent 40%
+        ),
+        #171614;
+}
+
+.dress-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    max-width: 1050px;
+    margin: 0 auto;
+    background: rgba(216, 191, 145, 0.16);
+}
+
+.dress-card {
+    background: #211f1b;
+    min-height: 330px;
+    padding: 45px 30px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.4s ease;
+}
+
+.dress-card:hover {
+    background: #28251f;
+    transform: translateY(-3px);
+}
+
+.dress-number {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    color: #d8bf91;
+    margin-bottom: 18px;
+}
+
+.dress-role {
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    color: #d8bf91;
+    margin: 0 0 12px;
+}
+
+.dress-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: #f6f0e5;
+    margin: 0 0 7px;
+}
+
+.dress-detail {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    line-height: 1.8;
+    color: #b9b0a3;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   COLOR SWATCHES
+========================================= */
+
+.color-guide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.color-swatch {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+
+    border: 2px solid rgba(255,255,255,0.22);
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.3),
+        inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+
+/* COLORS */
+
+.color-swatch.black {
+    background: #050505;
+}
+
+.color-swatch.champagne {
+    background: #d8b08c;
+}
+
+.color-swatch.cream {
+    background: #eee4d1;
+}
+
+.color-swatch.teal {
+    background: #006f78;
+}
+
+.color-swatch.midnight {
+    background: #00072e;
+}
+
+.color-swatch.light-pink {
+    background: #ff87ab;
+}
+
+.color-swatch.formal-pink {
+    background: #ff6392;
+}
+
+.color-swatch.burgundy {
+    background: #620029;
+}
+
+.color-swatch.burgundy-dark {
+    background: #500027;
+}
+
+
+/* COLOR NAMES */
+
+.color-labels {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+
+    font-size: 7px;
+    letter-spacing: 0.18em;
+    color: #8f887d;
+}
+
+.color-guide + .color-labels {
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   GUEST DRESS CODE
+========================================= */
+
+.guest-dress {
+    grid-column: 1 / -1;
+    min-height: 350px;
+}
+
+.guest-dress h3 {
+    color: #e2b3bd;
+}
+
+.guest-dress .dress-role {
+    color: #d8bf91;
+}
+
+.dress-note {
+    max-width: 550px;
+    margin: 25px auto 0;
+
+    font-size: 9px;
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+
+    color: #8f887d;
+}
+
+.dress-note-bottom {
+    max-width: 700px;
+    margin: 50px auto 0;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(216,191,145,0.15);
+    padding-top: 30px;
+}
+
+.dress-note-bottom p {
+    color: #8f887d;
+    font-size: 9px;
+    line-height: 1.8;
+    letter-spacing: 0.08em;
+}
+
+.dress-note-bottom strong {
+    color: #d8bf91;
+    font-weight: 400;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .dress-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guest-dress {
+        grid-column: auto;
+    }
+
+    .dress-card {
+        min-height: 300px;
+        padding: 40px 25px;
+    }
+
+    .dress-card h3 {
+        font-size: 34px;
+    }
+
+    .color-swatch {
+        width: 48px;
+        height: 48px;
+    }
+
+    .color-labels {
+        font-size: 6px;
+        gap: 10px;
+    }
+}
