@@ -1,4 +1,4 @@
-const eventDate=new Date("2026-12-12T16:00:00").getTime();
+const eventDate=new Date("2026-09-08T14:00:00").getTime();
 function countdown(){const d=eventDate-Date.now();const vals=[Math.max(0,Math.floor(d/86400000)),Math.max(0,Math.floor(d/3600000)%24),Math.max(0,Math.floor(d/60000)%60),Math.max(0,Math.floor(d/1000)%60)];["days","hours","minutes","seconds"].forEach((id,i)=>document.getElementById(id).textContent=String(vals[i]).padStart(2,"0"))} countdown();setInterval(countdown,1000);
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll(".reveal").forEach(e=>obs.observe(e));
 const music=document.getElementById("bgMusic"),mt=document.getElementById("musicToggle");mt.onclick=async()=>{if(music.paused){await music.play();mt.classList.add("active");mt.querySelector("span").textContent="Playing"}else{music.pause();mt.classList.remove("active");mt.querySelector("span").textContent="Music"}};
